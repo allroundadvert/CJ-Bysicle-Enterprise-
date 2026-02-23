@@ -1,183 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CJ Bysicle Enterprise</title>
+  <meta charset="UTF-8">
+  <title>CJ Bysicle Enterprise</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-:root{
-  --gold:#d4af37;
-}
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0f2027">
+  <link rel="apple-touch-icon" href="icon-192.png">
 
-body{
-  margin:0;
-  font-family:'Segoe UI',Tahoma,Verdana,sans-serif;
-  background:linear-gradient(135deg,#05070d,#0b1a2e,#05070d);
-  color:#fff;
-  text-align:center;
-}
+  <!-- SEO -->
+  <meta name="description" content="CJ Bysicle Enterprise – Quality bicycles, children power bikes, toy cars. Nationwide delivery available.">
 
-/* HEADER */
-header{
-  padding:60px 20px;
-  background:linear-gradient(135deg,#0a2a66,#000);
-  border-bottom:4px solid var(--gold);
-}
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      text-align: center;
+    }
 
-header h1{
-  font-size:2.5em;
-  color:var(--gold);
-}
+    h1 {
+      margin: 30px 15px 10px;
+      font-size: 2.5em;
+      color: #00fff7;
+    }
 
-header p{
-  max-width:900px;
-  margin:auto;
-  font-size:1.15em;
-  line-height:1.6;
-}
+    p {
+      max-width: 800px;
+      margin: 10px auto;
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
 
-/* ADDRESS */
-.address{
-  margin:20px auto;
-  font-weight:bold;
-}
+    .address {
+      font-weight: bold;
+      margin: 15px auto 30px;
+    }
 
-/* FLOATING SLIDER */
-.slider{
-  width:100%;
-  overflow:hidden;
-  margin:40px 0;
-}
+    /* FLOATING IMAGES */
+    .slider {
+      overflow: hidden;
+      width: 100%;
+      margin: 30px 0;
+    }
 
-.slides{
-  display:flex;
-  width:400%;
-  animation:slide 16s infinite;
-}
+    .slides {
+      display: flex;
+      width: calc(250px * 4);
+      animation: slide 18s linear infinite;
+    }
 
-.slides a{
-  width:25%;
-}
+    .slides img {
+      width: 250px;
+      margin: 0 10px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #00fff7;
+    }
 
-.slides img{
-  width:100%;
-  height:auto;
-}
+    @keyframes slide {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
 
-@keyframes slide{
-  0%{transform:translateX(0);}
-  25%{transform:translateX(-25%);}
-  50%{transform:translateX(-50%);}
-  75%{transform:translateX(-75%);}
-  100%{transform:translateX(0);}
-}
+    /* STATIC IMAGES */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
 
-/* STATIC GALLERY */
-.gallery{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
-  max-width:1200px;
-  margin:40px auto;
-  padding:0 20px;
-}
+    .gallery img {
+      width: 100%;
+      border-radius: 14px;
+      box-shadow: 0 0 18px #00fff7;
+    }
 
-.gallery img{
-  width:100%;
-  border-radius:14px;
-  box-shadow:0 10px 25px rgba(0,0,0,.6);
-  transition:transform .3s;
-}
+    .btn {
+      display: inline-block;
+      margin: 15px;
+      padding: 16px 28px;
+      font-size: 1.1em;
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+      border-radius: 12px;
+    }
 
-.gallery img:hover{
-  transform:scale(1.05);
-}
+    .whatsapp { background: #25d366; }
+    .call { background: #ff4c4c; }
 
-/* BUTTONS */
-.buttons{
-  margin:40px 0;
-}
-
-.btn{
-  display:inline-block;
-  margin:12px;
-  padding:16px 32px;
-  border-radius:14px;
-  font-weight:bold;
-  text-decoration:none;
-  color:#fff;
-}
-
-.call{background:#c0392b;}
-.whatsapp{background:#25d366;}
-
-footer{
-  background:#000;
-  padding:20px;
-  font-size:.9em;
-  border-top:3px solid var(--gold);
-}
-</style>
+    footer {
+      margin-top: 40px;
+      padding: 20px;
+      background: #111;
+      font-size: 0.9em;
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
   <h1>CJ Bysicle Enterprise</h1>
+
   <p>
-    All kinds of brand new bicycles for children and adults,  
-    children power bikes and luxury kids motor cars.  
-    <strong>Nationwide delivery available.</strong>
+    All kinds of brand-new bicycles for children and adults,  
+    children machine power bikes, and children motor cars such as  
+    Mercedes, Range Rover, Lexus, G-Wagon, and more.
   </p>
-</header>
 
-<div class="address">
-📍 15 & 18 Ugbagwe Street, Off Mission Road, Benin City, Edo State
-</div>
+  <p><strong>🚚 Nationwide Delivery Available</strong></p>
 
-<!-- FLOATING / MOVING IMAGES (4) -->
-<div class="slider">
-  <div class="slides">
-    <a href="https://wa.me/2349123832118?text=Hello%20CJ%20Bysicle%20Enterprise%2C%20I%20saw%20your%20products%20on%20your%20website%20and%20I%E2%80%99m%20very%20interested.%20Please%20send%20me%20prices%20and%20details.%20Thank%20you." target="_blank">
+  <div class="address">
+    📍 15 & 18 Ugbagwe Street, Off Mission Road, Benin City, Edo State
+  </div>
+
+  <!-- FLOATING IMAGES (4) -->
+  <div class="slider">
+    <div class="slides">
       <img src="https://raw.githubusercontent.com/allroundadvert/CJ-Bysicle-Enterprise-/155db4ea3100d0c5528d4823f31acb9424449e33/IMG-20260221-WA0025.jpg">
-    </a>
-    <a href="https://wa.me/2349123832118?text=Hello%20CJ%20Bysicle%20Enterprise%2C%20I%20saw%20your%20products%20on%20your%20website%20and%20I%E2%80%99m%20very%20interested.%20Please%20send%20me%20prices%20and%20details.%20Thank%20you." target="_blank">
       <img src="https://raw.githubusercontent.com/allroundadvert/CJ-Bysicle-Enterprise-/155db4ea3100d0c5528d4823f31acb9424449e33/IMG-20260221-WA0010.jpg">
-    </a>
-    <a href="https://wa.me/2349123832118?text=Hello%20CJ%20Bysicle%20Enterprise%2C%20I%20saw%20your%20products%20on%20your%20website%20and%20I%E2%80%99m%20very%20interested.%20Please%20send%20me%20prices%20and%20details.%20Thank%20you." target="_blank">
       <img src="https://raw.githubusercontent.com/allroundadvert/CJ-Bysicle-Enterprise-/155db4ea3100d0c5528d4823f31acb9424449e33/IMG-20260221-WA0011.jpg">
-    </a>
-    <a href="https://wa.me/2349123832118?text=Hello%20CJ%20Bysicle%20Enterprise%2C%20I%20saw%20your%20products%20on%20your%20website%20and%20I%E2%80%99m%20very%20interested.%20Please%20send%20me%20prices%20and%20details.%20Thank%20you." target="_blank">
       <img src="https://raw.githubusercontent.com/allroundadvert/CJ-Bysicle-Enterprise-/155db4ea3100d0c5528d4823f31acb9424449e33/IMG-20260221-WA0015.jpg">
+    </div>
+  </div>
+
+  <!-- STATIC IMAGES -->
+  <div class="gallery">
+    <a href="https://wa.me/2349123832118?text=Hello%20CJ%20Bysicle%20Enterprise%2C%20I%20saw%20your%20products%20on%20your%20website%20and%20I%20am%20very%20interested.%20Please%20send%20prices%20and%20details." target="_blank">
+      <img src="https://raw.githubusercontent.com/allroundadvert/CJ-Bysicle-Enterprise-/9100bf1a55610de49b5c76a9661c9b527b4e089b/WA_1771837614609.jpeg">
+    </a>
+
+    <a href="https://wa.me/2349123832118?text=Hello%20CJ%20Bysicle%20Enterprise%2C%20I%20saw%20your%20products%20on%20your%20website%20and%20I%20am%20very%20interested.%20Please%20send%20prices%20and%20details." target="_blank">
+      <img src="https://raw.githubusercontent.com/allroundadvert/CJ-Bysicle-Enterprise-/155db4ea3100d0c5528d4823f31acb9424449e33/IMG-20260221-WA0033.jpg">
     </a>
   </div>
-</div>
 
-<!-- STATIC IMAGES -->
-<div class="gallery">
-  <!-- All remaining images -->
-  <a href="https://wa.me/2349123832118?text=Hello%20CJ%20Bysicle%20Enterprise%2C%20I%20saw%20your%20products%20on%20your%20website%20and%20I%E2%80%99m%20very%20interested.%20Please%20send%20me%20prices%20and%20details.%20Thank%20you." target="_blank"><img src="https://raw.githubusercontent.com/allroundadvert/CJ-Bysicle-Enterprise-/155db4ea3100d0c5528d4823f31acb9424449e33/IMG-20260221-WA0016.jpg"></a>
+  <!-- CONTACT -->
+  <a class="btn whatsapp" href="https://wa.me/2349123832118" target="_blank">💬 WhatsApp</a>
+  <a class="btn call" href="tel:07045055024">📞 Call</a>
 
-  <a href="https://wa.me/2349123832118?text=Hello%20CJ%20Bysicle%20Enterprise%2C%20I%20saw%20your%20products%20on%20your%20website%20and%20I%E2%80%99m%20very%20interested.%20Please%20send%20me%20prices%20and%20details.%20Thank%20you." target="_blank"><img src="https://raw.githubusercontent.com/allroundadvert/CJ-Bysicle-Enterprise-/155db4ea3100d0c5528d4823f31acb9424449e33/IMG-20260221-WA0023.jpg"></a>
+  <footer>
+    © 2026 CJ Bysicle Enterprise
+  </footer>
 
-  <a href="https://wa.me/2349123832118?text=Hello%20CJ%20Bysicle%20Enterprise%2C%20I%20saw%20your%20products%20on%20your%20website%20and%20I%E2%80%99m%20very%20interested.%20Please%20send%20me%20prices%20and%20details.%20Thank%20you." target="_blank"><img src="https://raw.githubusercontent.com/allroundadvert/CJ-Bysicle-Enterprise-/155db4ea3100d0c5528d4823f31acb9424449e33/IMG-20260221-WA0026.jpg"></a>
-
-  <a href="https://wa.me/2349123832118?text=Hello%20CJ%20Bysicle%20Enterprise%2C%20I%20saw%20your%20products%20on%20your%20website%20and%20I%E2%80%99m%20very%20interested.%20Please%20send%20me%20prices%20and%20details.%20Thank%20you." target="_blank"><img src="https://raw.githubusercontent.com/allroundadvert/CJ-Bysicle-Enterprise-/155db4ea3100d0c5528d4823f31acb9424449e33/IMG-20260221-WA0031.jpg"></a>
-
-  <a href="https://wa.me/2349123832118?text=Hello%20CJ%20Bysicle%20Enterprise%2C%20I%20saw%20your%20products%20on%20your%20website%20and%20I%E2%80%99m%20very%20interested.%20Please%20send%20me%20prices%20and%20details.%20Thank%20you." target="_blank"><img src="https://raw.githubusercontent.com/allroundadvert/CJ-Bysicle-Enterprise-/155db4ea3100d0c5528d4823f31acb9424449e33/IMG-20260221-WA0028.jpg"></a>
-
-  <a href="https://wa.me/2349123832118?text=Hello%20CJ%20Bysicle%20Enterprise%2C%20I%20saw%20your%20products%20on%20your%20website%20and%20I%E2%80%99m%20very%20interested.%20Please%20send%20me%20prices%20and%20details.%20Thank%20you." target="_blank"><img src="https://raw.githubusercontent.com/allroundadvert/CJ-Bysicle-Enterprise-/155db4ea3100d0c5528d4823f31acb9424449e33/IMG-20260221-WA0027.jpg"></a>
-</div>
-
-<div class="buttons">
-  <a class="btn call" href="tel:07045055024">📞 Call Now</a>
-  <a class="btn whatsapp" href="https://wa.me/2349123832118">💬 WhatsApp</a>
-</div>
-
-<footer>
-  © 2026 CJ Bysicle Enterprise • Nationwide Delivery
-</footer>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js');
+    }
+  </script>
 
 </body>
 </html>
